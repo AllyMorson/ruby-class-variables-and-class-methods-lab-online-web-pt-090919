@@ -24,7 +24,7 @@ class Song
 
   def self.artist_count
     artist_count = {}
-    @@artists.each do |artist|
+    @@artists.each do |artist| #iterate over the @@artist array and populate a hash with the key/value pairs.
       if artist_count[artist]
         artist_count[artist] += 1 
       else
@@ -40,7 +40,7 @@ class Song
 
   def self.genre_count #step 1 self.what we are trying to accomplish which is a genre count
     genre_count = {} #step 2 and empty hash that will be populated 
-    @@genres.each do |genre| #step 3 iterate over the class variable array
+    @@genres.each do |genre| #step 3 iterate over the @@genres array and populate a hash with the key/value pairs.
       if genre_count[genre] #basically if that genre count is in the genre array alreay ...
         genre_count[genre] += 1  #add it to the count + 1 to account for genre
       else
