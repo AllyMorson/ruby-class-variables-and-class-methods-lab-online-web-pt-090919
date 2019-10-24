@@ -1,0 +1,54 @@
+#Song class to be able to keep track of the number of songs that it creates.
+#Song class to be able to show us all of the artists & genres of existing songs 
+#Song class to be able to keep track of the number of songs of each genre it creates.
+Lastly, we want our Song class to reveal to us the number of songs each artist is responsible for.
+class Song 
+attr_accessor :name, :genre, :artist 
+@@songcounter = 0 
+@@artist = []
+@@genre = []
+
+def initialize(name, genre, artist)
+@@songcounter += 1
+@name = name 
+@genre = genre 
+@artist = artist 
+@@genre << genre 
+@@artist << artist 
+
+def self.count 
+@@songcounter
+end 
+
+def self.genre 
+@@genre.uniq
+end
+
+def self.artist
+@@artist.uniq
+end
+
+def self.artist_count
+artist_count = {}
+@@artist.each do |artist|
+if artist_count[artist] += 1
+else
+artist_count[artist] = 1
+end 
+artist_count
+
+def self.genre_count
+genre_count = {}
+@@genre.each do |genre|
+if genre_count[genre] 
+genre_count[genre] += 1
+else
+genre_count[genre] = 1
+`end
+genre_count
+  end
+end
+
+
+
+
